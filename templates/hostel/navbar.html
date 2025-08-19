@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Sticky Navbar with Logo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Apply the Google Font */
+        }
+        .navbar {
+            background-color: #004D40; /* Dark teal background */
+        }
+        .navbar-brand {
+            color: #fff !important; /* White text */
+        }
+        .navbar-brand img {
+            height: 60px; /* Larger logo size */
+            width: auto;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.1); /* Enlarge the logo on hover */
+        }
+        .nav-link {
+            color: #fff !important; /* White text for links */
+        }
+        .nav-link:hover {
+            color: #e0f2f1 !important; /* Light teal text on hover */
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .nav-link.home-link {
+            color: #FFEB3B !important; /* Change Home link color to yellow */
+        }
+        .dropdown-menu {
+            background-color: #004D40; /* Dark teal background for dropdown */
+        }
+        .dropdown-item {
+            color: #fff !important; /* White text for dropdown items */
+        }
+        .dropdown-item:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+          
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <a class="navbar-brand" href="#">
+        <img src="{% static 'images/hostel1.png' %}" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto"> <!-- Use ml-auto to align items to the right -->
+            <li class="nav-item active">
+                <a class="nav-link home-link" href="{% url 'home' %}" id="home-link"><span>Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'shering' %}"><span>shering</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>Dropdown</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item text-dark" href="{% url 'facilitys' %}"><span>Facilitys</span></a>
+                    <a class="dropdown-item text-dark" href="{% url 'schedules' %}"><span>Schedules</span></a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contacts' %}"><span>Contacts</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFQP9ZY6Ej19U6l3eU1yYj3XM3WeAB5fkuqI5iSzAKqDkmy5jRm9jnhSRBzFCO" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

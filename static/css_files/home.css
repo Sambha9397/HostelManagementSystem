@@ -1,0 +1,12 @@
+
+    
+@media only screen and (max-width: 600px) {
+    
+    
+    #carouselExampleIndicators{
+       height: 45vh;
+    }
+    #slide_box{
+        height: 45vh;
+    }
+  }

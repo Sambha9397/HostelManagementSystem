@@ -1,0 +1,71 @@
+{% extends "hostel/home.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Contact Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css_files/contact.css' %}">
+</head>
+<body>
+    <!-- Contact Information Section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Contact Information</h2>
+        <div class="row justify-content-center">
+            <!-- Manager Information -->
+            <div class="col-md-4">
+                <div class="card contact-card">
+                    <img src="{% static 'images/contact1.jpg' %}" alt="Manager Photo">
+                    <div class="card-body">
+                        <h4 class="card-title">Manager Information</h4>
+                        <p>Name: John Doe</p>
+                        <p>Phone: +1 234 567 890</p>
+                        <p>Email: manager@hostel.com</p>
+                        <!-- Social Media Icons -->
+                        <p>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Owner Information -->
+            <div class="col-md-4">
+                <div class="card contact-card">
+                    <img src="{% static 'images/contact2.jpg' %}" alt="Owner Photo">
+                    <div class="card-body">
+                        <h4 class="card-title">Owner Information</h4>
+                        <p>Name: Jane Smith</p>
+                        <p>Phone: +1 234 567 891</p>
+                        <p>Email: owner@hostel.com</p>
+                        <!-- Social Media Icons -->
+                        <p>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Other Information -->
+            
+        </div>
+    </div>
+
+    
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% endblock %}
+</body>
+</html>

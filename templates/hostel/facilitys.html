@@ -1,0 +1,126 @@
+{% extends "hostel/home.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Facilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .facility-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .facility-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .facility-section {
+            margin-bottom: 50px;
+        }
+
+        .bg-custom {
+            background-color: #004D40;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-custom text-white text-center py-5">
+        <h1>Welcome to Our Hostel</h1>
+        <p>Your Comfort and Security is Our Priority</p>
+    </header>
+
+    <!-- Facilities Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Hostel Facilities</h2>
+        <div class="row">
+
+            <!-- Sleeping -->
+            <div class="col-md-4 facility-section">
+                <div class="card facility-card">
+                    <img src="{% static 'images/facility1.jpg' %}" alt="facility Photo">
+                    <div class="card-body">
+                        <h5 class="card-title">Sleeping</h5>
+                        <p class="card-text">Dorm-like spaces with shared rooms, each guest is provided a bed and storage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bathrooms -->
+            <div class="col-md-4 facility-section">
+                <div class="card facility-card">
+                    <img src="{% static 'images/bathroom.jpg' %}" class="card-img-top" alt="Bathrooms">
+                    <div class="card-body">
+                        <h5 class="card-title">Bathrooms</h5>
+                        <p class="card-text">Shared bathrooms and showers with regular cleaning for hygiene.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kitchen -->
+            <div class="col-md-4 facility-section">
+                <div class="card facility-card">
+                    <img src="{% static 'images/kitchen.jpg' %}" class="card-img-top" alt="Kitchen">
+                    <div class="card-body">
+                        <h5 class="card-title">Kitchen</h5>
+                        <p class="card-text">Communal kitchen area with refrigerators, storage, and food labeling systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Common Area -->
+            <div class="col-md-4 facility-section">
+                <div class="card facility-card">
+                    <img src="{% static 'images/area.jpg' %}" class="card-img-top" alt="Common Area">
+                    <div class="card-body">
+                        <h5 class="card-title">Common Area</h5>
+                        <p class="card-text">A common area for work, socializing, with potential amenities like a bar or rooftop terrace.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Activities -->
+            <div class="col-md-4 facility-section">
+                <div class="card facility-card">
+                    <img src="{% static 'images/social.jpg' %}" class="card-img-top" alt="Social Activities">
+                    <div class="card-body">
+                        <h5 class="card-title">Social Activities</h5>
+                        <p class="card-text">Hostels may organize events for guests, fostering a community spirit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Facilities -->
+            <div class="col-md-4 facility-section">
+                <div class="card facility-card">
+                    <img src="{% static 'images/facility2.jpg' %}" class="card-img-top" alt="Additional Facilities">
+                    <div class="card-body">
+                        <h5 class="card-title">Additional Facilities</h5>
+                        <p class="card-text">24-hour security, CCTV, electricity backup, water supply, Wi-Fi, mess, and laundry services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-custom text-white text-center py-4">
+        <p>&copy; 2024 Hostel Management. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
+</body>
+</html>

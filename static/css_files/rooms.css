@@ -1,0 +1,40 @@
+body {
+    background-color: #f4f4f9; /* Light background color for the entire page */
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    width: 18rem;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better emphasis */
+}
+.card-title {
+    background-color: #004D40; /* Custom background color for card title */
+    color: #ffffff; /* White text color for card title */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+.card-body {
+    text-align: center;
+}
+.card-text {
+    font-weight: bold;
+    color: #333333; /* Dark text color for better readability */
+}
+.card a {
+    text-decoration: none;
+    color: #004D40; /* Custom color for links */
+    font-weight: bold;
+}
+.card a:hover {
+    color: #00332D; /* Darker shade of custom color for link hover effect */
+    text-decoration: underline; /* Underline on hover */
+}

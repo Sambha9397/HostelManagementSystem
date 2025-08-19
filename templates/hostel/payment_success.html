@@ -1,0 +1,65 @@
+<!-- templates/payment_success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Status</title>
+    <!-- Bootstrap CSS for Styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .status-completed { color: green; }
+        .status-failed { color: red; }
+        .status-pending { color: orange; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2>Payment Status</h2>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Payment Details</h5>
+                <p><strong>Payment ID:</strong> {{ payment.payment_id }}</p>
+                <p><strong>Amount:</strong> {{ payment.amount }} {{ payment.currency }}</p>
+                <p><strong>Created At:</strong> {{ payment.created_at }}</p>
+                <p>
+                    <strong>Status:</strong>
+                    {% if payment.status == 'COMPLETED' %}
+                        <span class="status-completed">Completed</span>
+                    {% elif payment.status == 'FAILED' %}
+                        <span class="status-failed">Failed</span>
+                    {% else %}
+                        <span class="status-pending">Pending</span>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+
+        <!-- Status Messages -->
+        {% if payment.status == 'COMPLETED' %}
+            <div class="alert alert-success mt-4">
+                <strong>Success!</strong> Your payment was successfully processed.
+            </div>
+        {% elif payment.status == 'FAILED' %}
+            <div class="alert alert-danger mt-4">
+                <strong>Failed!</strong> Your payment could not be completed. Please try again or contact support.
+            </div>
+        {% else %}
+            <div class="alert alert-warning mt-4">
+                <strong>Pending!</strong> Your payment is currently being processed. Please wait for confirmation.
+            </div>
+        {% endif %}
+        
+        <!-- Action Buttons -->
+        <a href="{% url 'initiate_payment' %}" class="btn btn-primary mt-3">Make Another Payment</a>
+        <a href="{% url 'home' %}" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

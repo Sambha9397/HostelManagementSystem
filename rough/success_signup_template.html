@@ -1,0 +1,30 @@
+{% extends "hostel/home.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block content %}
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Key Page</title>
+    <link rel="stylesheet" href="{% static 'css_files/success.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Register Successfully...</h2>
+            <div class="success">
+                <div class="success-icon">
+                    
+                </div>
+                <p>Success</p>
+            </div>
+            <p>Go Back</p>
+        </div>
+        <div class="back-button">
+            <button><a href="{% url "login" %}">Login</a></button>
+        </div>
+    </div>
+</body>
+{% endblock  %}
+</html>

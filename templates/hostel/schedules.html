@@ -1,0 +1,138 @@
+{% extends "hostel/home.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Schedule</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .schedule-section {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #e9ecef;
+        }
+        .schedule-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #003d33;
+        }
+        .schedule-content {
+            margin-top: 10px;
+        }
+        .schedule-content p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+        .highlight {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="my-4 text-center " style="background:#003d33;border-radius:10px;color:white;padding:10px">Hostel Daily Schedule</h1>
+
+    <!-- Meal Times -->
+    <div class="schedule-section">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="schedule-title">Meal Times</div>
+                <div class="schedule-content">
+                    <p><strong>Breakfast:</strong> 7:00 AM - 9:00 AM</p>
+                    <p><strong>Lunch:</strong> 12:00 PM - 2:00 PM</p>
+                    <p><strong>Dinner:</strong> 7:00 PM - 9:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Quiet Hours and Visitors -->
+            <div class="col-md-4">
+                <div class="schedule-title">Quiet Hours & Visitors</div>
+                <div class="schedule-content">
+                    <p><strong>Quiet Hours:</strong> 10:00 PM - 7:00 AM</p>
+                    <p><strong>Visitors:</strong> 10:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Facilities and Services -->
+            <div class="col-md-4">
+                <div class="schedule-title">Facilities & Services</div>
+                <div class="schedule-content">
+                    <p><strong>Laundry:</strong> 8:00 AM - 6:00 PM</p>
+                    <p><strong>Housekeeping:</strong> Daily from 9:00 AM - 1:00 PM</p>
+                    <p><strong>Common Room:</strong> Open 24 hours</p>
+                    <p><strong>Study Room:</strong> 8:00 AM - 10:00 PM</p>
+                    <p><strong>Gym:</strong> 6:00 AM - 10:00 PM</p>
+                    <p><strong>TV Lounge:</strong> 7:00 AM - 11:00 PM</p>
+                    <p><strong>Internet Access:</strong> 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Check-in and Check-out -->
+    <div class="schedule-section">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="schedule-title">Check-in & Check-out</div>
+                <div class="schedule-content">
+                    <p><strong>Check-in Time:</strong> 2:00 PM</p>
+                    <p><strong>Check-out Time:</strong> 12:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Reception Desk and Emergency Contact -->
+            <div class="col-md-6">
+                <div class="schedule-title">Reception & Emergency</div>
+                <div class="schedule-content">
+                    <p><strong>Reception Desk:</strong> 24 hours</p>
+                    <p><strong>Emergency Contact:</strong> Available at Reception</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activities -->
+    <div class="schedule-section">
+        <div class="schedule-title">Activities</div>
+        <div class="schedule-content">
+            <p><strong>Game Night:</strong> Fridays at 8:00 PM</p>
+            <p><strong>Movie Night:</strong> Saturdays at 7:00 PM</p>
+            <p><strong>Yoga Class:</strong> Sundays at 6:00 AM</p>
+        </div>
+    </div>
+
+    <!-- Special Services -->
+    <div class="schedule-section">
+        <div class="schedule-title">Special Services</div>
+        <div class="schedule-content">
+            <p><strong>Local Tours:</strong> Book at Reception</p>
+            <p><strong>Transportation Arrangements:</strong> Available at Reception</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
+</body>
+</html>
